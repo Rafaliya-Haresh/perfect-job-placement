@@ -1,0 +1,36 @@
+/**
+ *  variables for colors
+ */
+h1, h2, h3, h4, h5, h6, p, input, label, div, span, button {
+  font-family: 'ProximaNovaSoft'; }
+
+.ic-primary-btn {
+  background-color: #333333;
+  border: 0px solid green; }
+
+.ic-primary-btn:focus,
+.ic-primary-btn:active,
+.ic-primary-btn:hover {
+  background-color: #252525;
+  color: #fff;
+  border-color: #204d74; }
+
+.btn-primary {
+  background-color: #008cc9; }
+
+.ic-primary-light-btn {
+  background-color: #008cc9;
+  height: 44px;
+  font-size: 16px;
+  border: 0px solid green; }
+
+.ic-primary-light-btn:focus,
+.ic-primary-light-btn:active,
+.ic-primary-light-btn:hover {
+  background-color: #008cc9;
+  color: #fff;
+  border-color: #204d74;
+  box-shadow: 1px 1px 4px #4285f4; }
+
+.p-s-desc {
+  color: rgba(0, 0, 0, 0.5); }

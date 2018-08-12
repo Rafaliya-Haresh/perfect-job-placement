@@ -1,0 +1,39 @@
+@import "variables";
+
+
+.ic-body {
+	.creaditienl-boxes {
+		background-color: rgba(255, 255, 255, 0.58);
+	    padding: 50px;
+	    width: 500px;
+	    margin: auto;
+	    border-radius: 5px;
+        .signup-txt {
+            font-size: 12px;
+        }
+	}
+}
+
+
+.ic-form {
+    .input-group {
+        width: 100%;
+    }
+    .input-group-addon {
+        background-color: $white;
+        color: $p-dark;
+        width: 45px;
+    }
+    .icon-email {
+        font-size: 20px;
+    }
+    .icon-lock {
+        font-size: 20px;
+    }
+    .icon-user {
+        font-size: 20px;
+    }
+    a {
+        color: $primary-light-color !important;
+    }
+}

@@ -1,0 +1,61 @@
+<div data-ng-controller="UserController" class="public-form-container" data-ng-init="uo.init()">
+    <div class="creaditienl-boxes">
+        <form class="form-horizontal text-center ic-form" name="registerForm" ng-submit="uo.add.submit()" novalidate>
+            <div class="form-group">
+                <div class="input-group input-group-first">
+                    <span class="input-group-addon">
+                        <span class="fa fa-user icon-user"></span>
+                    </span>
+                    <input  type="text" autocomplete="off" class="form-control input-lg" placeholder="First Name" name="Firstname" data-ng-model="uo.add.model.first_name" data-ng-required="true" maxlength="25">
+                </div>
+                <span class="text-red pull-right" data-ng-show="uo.add.isSubmited && registerForm.Firstname.$error.required">First name can't be blank</span>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <span class="fa fa-user icon-user"></span>
+                    </span>
+                    <input type="text" autocomplete="off" class="form-control input-lg" placeholder="Last Name" name="Lastname" data-ng-model="uo.add.model.last_name" data-ng-required="true" maxlength="25">
+                </div>
+                <span class="text-red pull-right" data-ng-show="uo.add.isSubmited && registerForm.Lastname.$error.required">Last name can't be blank</span>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <span class="fa fa-envelope-o icon-email"></span>
+                    </span>
+                    <input type="email" autocomplete="off" class="form-control input-lg" placeholder="Email" name="email" data-ng-model="uo.add.model.email" data-ng-required="true"  data-ic-unique="{field: 'email', model: 'User' , id: g.loggedUser._id}">
+                </div>
+                <span class="text-red pull-right" data-ng-show="uo.add.isSubmited && registerForm.email.$error.required">Email can't be blank</span>
+                <span class="text-red pull-right" data-ng-show="uo.add.isSubmited && registerForm.email.$error.email">Email is invalid</span>
+                <span class="text-red pull-right" data-ng-show="registerForm.email.$dirty && registerForm.email.$error.unique">Email address already in use</span>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <span class="fa fa-lock icon-lock"></span>
+                    </span>
+                    <input type="password" autocomplete="off" class="form-control input-lg" placeholder="Password" name="userPassword" ng-model="uo.add.model.password" data-ng-required="true" minlength="8" maxlength="20" ng-pattern="/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9$@$!%*#?&]+)$/">
+                </div>
+                <span class="text-red pull-right" data-ng-show="uo.add.isSubmited && registerForm.userPassword.$error.required">Password can't be blank</span>
+                <span class="text-red pull-right" data-ng-show="uo.add.isSubmited && registerForm.userPassword.$error.minlength">Password too short (Minimum 8 char)</span>
+                <span class="text-red pull-right" data-ng-show="uo.add.isSubmited && registerForm.userPassword.$error.pattern && !registerForm.userPassword.$error.minlength">Passwords must have at least one letter or digit character</span>
+            </div>
+            
+            <div class="divider divider-lg"></div>
+            <div class="form-group">
+                <p class="signup-txt">By clicking on sign up, you agree to <a href="#!/terms-and-condition">terms & conditions</a> and <a href="#!/privacy-policy">privacy policy</a></p>
+                <div class="divider"></div>
+                <button  type="submit" class="btn btn-primary btn-block btn-lg ic-primary-btn" data-ng-disabled="uo.add.isSentReq">Sign up</button>
+            </div>
+            
+            <div class="divider"></div>
+            <section class="additional-info">
+                <p class="text-center"><a href="#!login" >Log in now</a></p>
+            </section>
+            
+        </form>
+        
+        
+    </div>
+</div>

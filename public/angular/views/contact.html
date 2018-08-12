@@ -1,0 +1,121 @@
+
+<div class="contact-page">
+
+	<!-- start banner Area -->
+	<section class="banner-area relative" id="home">	
+		<div class="overlay overlay-bg"></div>
+		<div class="container">
+			<div class="row d-flex align-items-center justify-content-center">
+				<div class="about-content col-lg-12">
+					<h1 class="text-white">
+						Contact Ussss				
+					</h1>	
+					<p class="text-white"><a href="#!/home">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="contact.html"> Contact Us</a></p>
+				</div>											
+			</div>
+		</div>
+	</section>
+	<!-- End banner Area -->	
+
+
+
+	<!-- Start contact-page Area -->
+	<section class="contact-page-area section-gap">
+		<div class="container">
+			<div class="row">
+				<div class="map-wrap" style="width:100%; height: 445px;" id="map"></div>
+				<div class="col-lg-4 d-flex flex-column">
+					<a class="contact-btns" href="#">Submit Your CV</a>
+					<a class="contact-btns" href="#">Post New Job</a>
+					<a class="contact-btns" href="#">Create New Account</a>
+				</div>
+				<div class="col-lg-8">
+					<form class="form-area " id="myForm" action="mail.php" method="post" class="contact-form text-right">
+						<div class="row">	
+							<div class="col-lg-12 form-group">
+								<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required="" type="text">
+							
+								<input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control" required="" type="email">
+
+								<input name="subject" placeholder="Enter your subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your subject'" class="common-input mb-20 form-control" required="" type="text">
+								<textarea class="common-textarea mt-10 form-control" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
+								<button class="primary-btn mt-20 text-white" style="float: right;">Send Message</button>
+								<div class="mt-20 alert-msg" style="text-align: left;"></div>
+							</div>
+						</div>
+					</form>	
+				</div>
+			</div>
+		</div>	
+	</section>
+
+</div>
+
+
+
+
+
+<script>
+	$( document ).ready(function() {
+
+
+		// google.maps.event.addDomListener(window, 'load', init);
+	        
+	            function init() {
+	            	console.log("loading....");
+	                // Basic options for a simple Google Map
+	                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+	                var mapOptions = {
+	                    // How zoomed in you want the map to start at (always required)
+	                    zoom: 17,
+
+	                    // The latitude and longitude to center the map (always required)
+	                    center: new google.maps.LatLng(22.2787847, 70.7729664)
+
+	                    // How you would like to style the map. 
+	                    // This is where you would paste any style found on Snazzy Maps.
+	                    // styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
+	                };
+
+	                // Get the HTML DOM element that will contain your map 
+	                // We are using a div with id="map" seen below in the <body>
+	                var mapElement = document.getElementById('map');
+
+	                // Create the Google Map using our element and options defined above
+	                var map = new google.maps.Map(mapElement, mapOptions);
+
+	                // Let's also add a marker while we're at it
+	                var marker = new google.maps.Marker({
+	                    position: new google.maps.LatLng(22.2787847, 70.7729664),
+	                    map: map,
+	                    title: 'Snazzy!'
+	                });
+	            }
+
+	            init();
+
+		 // function initMap() {
+	  //       var mapDiv = document.getElementById('map');
+	  //       var map = new google.maps.Map(mapDiv, {
+	  //         zoom: 15,
+	  //         center: new google.maps.LatLng(22.2787847, 70.7729664)
+	  //       });
+
+	  //       var marker = new google.maps.Marker({
+   //              center: new google.maps.LatLng(22.2787847, 70.7729664),
+   //              map: map,
+   //              title: 'Snazzy!'
+   //          });
+
+	  //       // We add a DOM event here to show an alert if the DIV containing the
+	  //       // map is clicked.
+	  //       google.maps.event.addDomListener(mapDiv, 'click', function() {
+	  //         // window.alert('Map was clicked!');
+	  //       });
+	  //     }
+
+	  //      // google.maps.event.addDomListener(window, 'load', init);
+
+   //    initMap();
+});
+</script>

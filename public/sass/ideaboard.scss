@@ -1,0 +1,687 @@
+@import "variables";
+
+
+
+/**
+ *
+ */
+.ib-board-header-lbl-ul {
+	width: auto;
+	float: left;
+	margin: 0px;
+	padding: 10px 10px 0px 10px;
+}
+
+
+
+
+
+
+// -----------------------------------------------------------------------------
+// Board Listing Page
+// -----------------------------------------------------------------------------
+
+
+.boards-container {
+	padding-top: 100px;
+
+	.board-bx {
+
+		.board-remove-icon {
+			position: absolute;
+			right: 25px;
+			top: 10px;
+			cursor: pointer;
+			color: $primary-light-color;
+			display: none;
+		}
+
+		&:hover {
+			.board-remove-icon {
+				display: block !important;
+			}
+		}
+
+		.board-bx-wrapper {
+			border: 1px solid $gray-light-s;
+			border-radius: 4px;
+			margin-bottom: 30px;
+
+			&:hover {
+				border: 1px solid $primary-light-color;
+			}
+
+			.board-name-bx {
+				min-height: 100px;
+				padding: 10px;
+
+				.board-title {
+					background: rgba(128, 128, 128, 0.62);
+				    padding: 5px 5px 4px 5px;
+				    border-radius: 3px;
+				    display: inline-block;
+				}
+			}
+		}
+
+		.create-board-bx {
+			background-color: $gray-light-s;
+		}
+	}
+}
+
+
+
+
+// -----------------------------------------------------------------------------
+// IdeaBoard Header
+// -----------------------------------------------------------------------------
+
+
+.ib-header {
+
+	background-color: rgba(0,0,0,0.2) !important;
+	border: 0px solid rgba(0,0,0,0.2) !important;
+
+	.block{
+		display: block;
+	}
+	.icon-search-button {
+		display: block;
+	    background: transparent;
+	    border: none;
+	    float: right;
+	    position: absolute;
+	    right: 7px;
+	    top: 2px;
+
+    	i {
+    		color: 	$p-dark;
+    		font-size: 15px;
+    	}
+	}
+
+	.borad-search {
+		position: relative;
+	    width: 28px;
+	    display: block;
+	    float: right;
+	    background-color: #f3f4f6;
+	    border-radius: 3px;
+	    margin: 13px 15px 5px 0px;
+	    overflow: hidden;
+	    height: 25px;
+
+	    input {
+	    	height: 25px;
+	    }
+	}
+
+	#right-archived-tab-menu-ul.sidr {
+    	width: 320px;
+	}
+
+	#right-archived-tab-menu-ul, #right-boardnotification {
+		padding: 15px;
+
+		.notify-section {
+			height: 91vh;
+			overflow-y: auto;
+		}
+		.notify-section-scroll::-webkit-scrollbar {
+			-webkit-appearance: none !important;
+			width: 5px !important;
+			height: 10px !important;
+			margin-left: 2px;
+		}
+		.notify-section-scroll::-webkit-scrollbar-thumb {
+		 	border-radius: 8px !important;
+			border: 0px solid white !important;
+			background-color: rgba(0,0,0,.2) !important;
+		}
+		.close-archived-sidr-ib {
+			height: 35px;
+			margin-bottom: 5px;
+		}
+		.archive-header-text {
+		    font-family: ssr, arial !important;
+		    font-size: 17px !important;
+		    font-weight: 800 !important;
+		}
+		.send-board-link {
+    		border-bottom: 1px solid #9E9E9E;
+    		color: #9E9E9E;
+    		font-size: 12px;
+		}
+	}
+
+	.right-archived-menu {
+
+		li a {
+			cursor: default !important;
+		    display: inline-block;
+		    width: 100%;
+		    padding: 5px 0;
+		}
+		.fa-archive {
+			color: #9E9E9E;
+			margin-right: 6px;
+		}
+	}
+
+	.board-mobile-menu li {
+    	padding: 10px 10px;
+    	border-bottom: 1px solid #DFDFDF;
+    	display: block;
+    	min-height: 42px;
+
+    	a {
+    		color: #000;
+    	}
+	}
+
+	#right-boardnotification.sidr {
+    	width: 320px !important;
+    	overflow: hidden;
+	}
+
+	#right-boardnotification {
+
+		.closeboardnotificationSidr {
+			margin-bottom: 20px;
+			text-align: center;
+		}
+		.notify-list {
+			.c2 {
+	    		border-bottom: 2px solid rgba(216, 215, 215, 0.25);
+	    		margin-bottom: 10px;
+
+	    		.u-img {
+				    width: 35px;
+				    float: left;
+				    margin-right: 10px;
+				    border-radius: 4px;
+				}
+
+				.ic-user-notify-data {
+				    overflow: hidden;
+				    display: block;
+
+				    strong {
+				    	word-wrap: break-word;
+				    }
+				}
+
+				.ic-c1-date-cn {
+					margin: 0px 0px 10px 47px;
+				}
+			}
+		}
+	}
+
+	.notification-count {
+		background: #ff6262;
+	    height: 17px;
+	    line-height: 19px;
+	    text-align: center;
+	    font-size: 9px;
+	    color: #fff;
+	    display: inline-block;
+	    border-radius: 255px;
+	    min-width: 16px;
+	    position: absolute;
+	    top: 5px;
+	    right: 0px;
+	    z-index: 10000;
+	}
+
+	.breadscumb-text:hover {
+		color: #337ab7;
+		text-shadow: 1px 0px;
+	}
+
+	.header-ib-settings-icons-cn {
+		i.ib-icon-white {
+			font-size: 20px;
+		}
+		.h-close-icon a {
+			padding-top: 12px;
+			padding-bottom: 12px;
+		}
+	}
+	.navbar-brand {
+		color: white;
+	}
+
+}
+
+
+.ib-change-profile {
+	.user-image {
+		width: 50%;
+		margin: auto;
+	}
+	.user-image-box {
+		min-height: 145px;
+	}
+}
+
+
+// -----------------------------------------------------------------------------
+// IdeaBoard container
+// -----------------------------------------------------------------------------
+.ib-container {
+	.addcard-box-input {
+	    border: 1px solid $gray-light-s;
+	    border-radius: 4px !important;
+		background-color: $white;
+	 	position: absolute;
+	    top: 0;
+	    width: 250px;
+	    left: 0;
+	    padding: 10px 10px 0 10px;
+	}
+
+	.add-column-btn {
+		width: 50%;
+	}
+
+	.cancel-column-link {
+		padding: 7px 60px 0px 0px;
+		cursor: pointer;
+		color: $blue;
+	}
+
+	.ib-ideaboard-box {
+	    margin-bottom: 0px !important;
+	    overflow: hidden;
+	    border: none;
+
+	    .ibcard-container {
+	    	.ibcard {
+	    		.ibcard-head {
+			    	padding: 13px 10px 10px 10px ;
+
+		    		a.ibcard-head-title {
+		    			padding-top: 1px !important;
+
+		    			span {
+		    				position: relative;
+		    				top: 1px;
+		    			}
+		    			.columnheadertime {
+		    				top: -2px !important;
+		    				left: 4px !important;
+		    			}
+		    		}
+			    }
+		    	.ibcard-body.redius {
+				    border-bottom-left-radius: 5px !important;
+				    border-bottom-right-radius: 5px !important;
+				}
+			}
+		}
+		.ic-vertical-column {
+			a.ibcard-head-title {
+				span {
+					line-height: 30px !important;
+				}
+			}
+		}
+		.ibcard-container-min {
+	    	padding: 9px 10px 10px 10px !important;
+
+    		a.ibcard-head-title {
+    			padding-top: 0px !important;
+
+    			span {
+    				position: relative;
+    				top: 1px;
+    			}
+    		}
+		}
+
+	}
+
+	.ib-calendar-collapse {
+		height: calc(100vh - 50px) !important;
+	}
+
+	.ib-ideaboard-view-wrapper {
+		height: calc(100vh - 50px) !important;
+	}
+
+	.add-list-ui {
+		line-height: normal !important;
+		vertical-align: -20% !important;
+	}
+
+}
+
+.card-spinner {
+	height: 20px;
+	width: 20px;
+}
+
+.ic-vertical-column {
+	.ibcard-head {
+		padding: 10px 10px 10px 10px !important;
+	}
+}
+
+.ideboard-detail-page {
+	width: 100%;
+	max-width: 100%;
+	margin: 0px 0px 0px 0px;
+	padding-top: 50px;
+
+	#left-tab-menu-ul {
+		.close-sidr-ib {
+			height: 35px;
+			padding: 10px;
+		}
+	}
+
+	.jump-icon {
+		position: relative;
+		top: 1px;
+	}
+
+	.add-initiative-task-cn {
+		.add-activity-cn {
+			padding-right: 2px;
+			padding-left: 15px;
+		}
+
+		.add-risk-cn {
+			padding-right: 7px;
+			padding-left: 7px;
+		}
+
+		.add-task-cn {
+			padding-right: 15px;
+			padding-left: 2px;
+		}
+
+		.btn-addcard {
+			padding: 6px;
+		}
+	}
+
+	.add-initiative-task-cn-two {
+		.add-activity-cn, .add-risk-cn, .add-task-cn {
+			width: 50%;
+		}
+
+		div:first-child {
+			padding: 0 7px 0 15px;
+		}
+
+		div:last-child {
+			padding: 0 15px 0 7px;
+		}
+	}
+
+	.add-initiative-task-cn-one {
+		.add-activity-cn, .add-risk-cn, .add-task-cn {
+			width: 100%;
+		}
+
+		div:first-child {
+			padding: 0 15px;
+		}
+	}
+
+}
+
+
+.portlet-header-head.min-height-50px {
+	min-height: 50px;
+
+	.columnheadertime-one {
+		width: 100%  !important;
+		float: right !important;
+	}
+}
+
+.header-height-mgmt,
+.minimized-header-height-mgmt {
+	margin-bottom: 5px !important;
+}
+
+.minimized-column-name {
+	white-space: nowrap;
+    height: 30px ;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.body-project {
+	ul.card-dropdown.card-dropdown-labels {
+		a {
+			padding: 5px 7px;
+		}
+	}
+	.card-dropdown {
+		&.card-dropdown-labels {
+			height: 90%;
+			padding: 0 8px 0 10px;
+		}
+	}
+
+	.ibcard-body-inner {
+		.card {
+			.card-content {
+				padding: 10px;
+
+				.r4-icons {
+					padding-top: 0;
+					.card-notification {
+						float: left;
+						position: relative;
+						line-height: 30px;
+						width: 30px;
+						text-align: center;
+						margin-bottom: 0px !important;
+						margin-right: 0px !important;
+					}
+					.card-notification-2 {
+						width: 64px;
+					}
+				}
+
+				.r1-content.ic-ideaboard-card-r1 {
+					font-size: 14px !important;
+					line-height: 18px !important;
+					margin: 0 0 5px 0 !important;
+				}
+			}
+		}
+	}
+	ul.card-dropdown.card-dropdown-labels {
+		.card-dropdown-labels-wrap {
+			.dropdown-editlabel {
+				input.form-control {
+					width: 130px !important;
+					margin-top: 1px !important;
+				}
+			}
+		}
+	}
+	.sp-replacer {
+		border: none !important;
+	}
+}
+
+.c-member {
+	margin-bottom: 0;
+}
+
+.card-est-remaining-cn {
+	font-size: 11px;
+	background-color: orange;
+	padding: 3px 4px 2px;
+	color: #fff;
+	border-radius: 4px;
+	line-height: 30px;
+	margin-right: 2px;
+}
+
+
+.card-est-working-cn {
+	font-size: 11px;
+	background-color: gray;
+	padding: 3px 4px 2px;
+	color: #fff;
+	border-radius: 4px;
+	line-height: 30px;
+}
+
+.card-est-working-on-cn {
+	width: 52px !important;
+    display: inline-block;
+    line-height: 13px;
+}
+
+.card-est-time-cn {
+	font-size: 11px;
+    background-color: #337ab7;
+    padding: 3px 4px 2px;
+    color: #fff;
+	line-height: 30px;
+    border-radius: 4px;
+}
+
+.card-timer {
+	text-align: center;
+	font-size: 25px;
+	padding: 16px 0 15px;
+	margin-bottom: 0;
+}
+
+.ibcard-container-scroll {
+	.its-minized {
+		.fa.pull-left-minimized {
+		    margin-right: 8px !important;
+		}
+	}
+	.ibcard-head-title {
+		.fa.pull-left {
+		    margin-right: -10px;
+		}
+	}
+}
+
+
+.board-filter-cn {
+	margin: 8px 0 8px 15px;
+
+	.multiselect-parent {
+		.dropdown-menu .dropdown-header {
+			padding: 5px 15px 2px;
+
+			input.searchField {
+				height: 30px;
+			}
+		}
+
+		.dropdown-menu>li>a {
+			cursor: pointer;
+			padding: 5px 15px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+
+			span:first-child {
+				background-color: #e4e4e4;
+				width: 17px;
+				height: 17px;
+				left: 0;
+				display: block;
+				float: left;
+			}
+
+			.glyphicon-ok:before {
+				position: relative;
+				left: 2px;
+				font-size: 12px;
+			}
+
+			span {
+				span:first-child {
+					background-color: #fff;
+					width: auto;
+					height: auto;
+					left: inherit;
+					display: inherit;
+					float: inherit;
+				}
+
+				position: relative;
+				left: 4px;
+			}
+		}
+	}
+}
+
+.ib-header-filter {
+	background-color: rgba(0, 0, 0, 0.3) !important;
+	border: 0px solid rgba(0, 0, 0, 0.3) !important;
+	z-index: 1;
+}
+
+.hide-filter {
+	font-size: 14px;
+	color: #fff;
+	position: relative;
+	top: 15px;
+	left: 15px;
+	border-bottom: 1px solid;
+}
+
+.ib-icon-filtered {
+	color: #337ab7;
+}
+
+
+
+
+/*
+** User work report
+*/
+#modal-estimate-user-report {
+	overflow-y: hidden !important;
+	.show-summary {
+		line-height: 34px;
+	}
+	.user-filter {
+		padding-bottom: 18px;
+	}
+	.check-box {
+		vertical-align: middle;
+    	margin: 0px;
+	}
+	.modal-body {
+		max-height: calc(100vh - 50px) !important;
+    	overflow: auto !important;
+	}
+}
+
+
+
+.no-login-user {
+	.ib-content-block {
+		.ibcard-body {
+			.ibcard-body-inner {
+				border-bottom-right-radius: 5px;
+				border-bottom-left-radius: 5px;
+			}
+		}
+	}
+
+	.me-ideaboard-cn {
+		.card-list {
+			margin-bottom: 10px !important;
+		}
+	}
+}

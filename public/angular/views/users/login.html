@@ -1,0 +1,45 @@
+<div data-ng-controller="UserController" class="public-form-container" data-ng-init="uo.init()">
+    <div class="creaditienl-boxes">
+        <form class="form-horizontal ic-form" name="loginForm" ng-submit="uo.lo.submit()" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <div class="input-group input-group-first">
+                        <span class="input-group-addon">
+                            <span class="fa fa-envelope-o icon-email"></span>
+                        </span>
+                        <input type="email" autocomplete="off"  class="form-control input-lg" placeholder="Email" name="userEmail" autocomplete="off"  ng-model="uo.lo.model.email" data-ng-required="true">
+                    </div>
+                    <span class="text-red pull-right" data-ng-show="uo.lo.isSubmited && loginForm.userEmail.$error.required">Email is required</span>
+                    <span class="text-red pull-right" data-ng-show="uo.lo.isSubmited && loginForm.userEmail.$error.email">Email is invalid</span>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <span class="fa fa-lock icon-lock"></span>
+                        </span>
+                        <input type="password" autocomplete="off"  class="form-control input-lg" placeholder="Password" name="userPassword" ng-model="uo.lo.model.password" data-ng-required="true">
+                    </div>
+                    <span class="text-red pull-right" data-ng-show="uo.lo.isSubmited && loginForm.userPassword.$error.required">Password is required</span>
+                </div>
+                <div class="divider divider-lg"></div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block text-center ic-primary-btn" ng-disabled="uo.lo.isSentReq">Log in</button>
+                </div>
+            </fieldset>
+            
+            <div class="divider"></div>
+            <section class="additional-info">
+                <p class="text-center">
+                    <a href="#!forgot-password">Forgot your password?</a>
+                    <span> | </span>
+                    <a href="#!signup">Sign up</a>
+                </p>
+                <p class="text-center" ng-if="uo.ri.model.isActivate == false">
+                    <a href="" data-ng-click="uo.ri.submit(uo.ri.model)">Click here to resend verfication details</a>
+                </p>
+            </section>
+            
+        </form>
+        
+    </div>
+</div>

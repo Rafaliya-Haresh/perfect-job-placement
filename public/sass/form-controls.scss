@@ -1,0 +1,48 @@
+@import "variables";
+
+
+
+
+h1, h2, h3, h4, h5, h6,p, input, label, div, span, button {
+	font-family :'ProximaNovaSoft';
+}
+
+
+
+.ic-primary-btn {
+    background-color: $p-dark;
+    border: 0px solid green;
+}
+
+.ic-primary-btn:focus,
+.ic-primary-btn:active,
+.ic-primary-btn:hover {
+    background-color: $s-dark;
+    color: #fff;
+    border-color: #204d74;    
+}
+
+.btn-primary {
+	background-color: $primary-light-color;
+}
+
+.ic-primary-light-btn {
+    background-color: $primary-light-color;
+    height: 44px;
+	font-size: 16px;
+    border: 0px solid green;
+}
+
+.ic-primary-light-btn:focus,
+.ic-primary-light-btn:active,
+.ic-primary-light-btn:hover {
+    background-color: $primary-light-color;
+    color: #fff;
+    border-color: #204d74;
+    box-shadow: 1px 1px 4px #4285f4;
+
+}
+
+.p-s-desc {
+	color: $gray-light;
+}

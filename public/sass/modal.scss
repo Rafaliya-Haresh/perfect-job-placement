@@ -1,0 +1,1461 @@
+@import "variables";
+
+
+
+
+// -----------------------------------------------------------------------------
+// Common css
+// -----------------------------------------------------------------------------
+
+.modal {
+	.modal-header {
+		.close-icon {
+			position: absolute;
+    		right: 40px;
+		}
+		button.close {
+			margin-top: -6px;
+    		font-size: 35px;
+		}
+	}
+}
+#invite-req-modal {
+	.invite-box {
+	    border-bottom: 1px solid #ececec;
+	    padding: 8px 5px 4px 5px;
+	}
+	.invite-btn {
+		display: block;
+	}
+	.modal-body {
+	    position: relative !important;
+	    padding: 2px 15px 0px 15px !important;
+	}
+}
+
+
+.ic-delete-confirm-modal {
+    .modal-content {
+        text-align: center;
+
+        .modal-header {
+            padding-bottom: 0px;
+            border: none;
+
+            .close {
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                font-size: 40px;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            .icon1 {
+            	font-size: 80px;
+            }
+        }
+        .modal-body {
+            padding-bottom: 0px;
+            border: none;
+
+            .title {
+                margin-bottom: 20px;
+                color: $dove-gray;
+                font-weight: normal;
+            }
+            .title-d {
+                padding: 0px 15px 15px 15px;
+                color: $mine-shaft;
+                width: 80%;
+			    margin: 0 auto;
+			    font-size: 17px;
+            }
+        }
+        .modal-footer {
+            border: none;
+            justify-content: center;
+
+            .foot-btns {
+                padding-bottom: 30px;
+
+                button {
+                    padding: 6px 36px;
+                    border-radius: 3px;
+                }
+
+                & > :not(:last-child) {
+                    margin-right: 6px;
+                }
+                & > :not(:first-child) {
+                    margin-left: 6px;
+                }
+            }
+        }
+
+        .ic-modal-icon {
+            margin: 0 auto;
+            padding: 10px;
+            display: block;
+            width: 100%;
+        }
+
+        .btn-d-cancel {
+            background-color: $silver;
+            color: $white;
+        }
+    }
+}
+
+
+
+
+
+
+// -----------------------------------------------------------------------------
+// Create Idea Board
+// -----------------------------------------------------------------------------
+
+.modal-create-board {
+	.modal-title {
+		color: $gray-light;
+	}
+	form {
+		width: 400px;
+		margin: 0px auto;
+	}
+	.close-icon {
+		width: 35px;
+		position: absolute;
+		right: 25px;
+		top: 15px;
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// -----------------------------------------------------------------------------
+// Ideaboard Settings
+// -----------------------------------------------------------------------------
+
+#modal-board-settings {
+
+	.board-setting-header {
+		padding: 15px 15px 15px 25px !important;
+    	border-bottom: 1px solid #e5e5e5 !important;
+	}
+
+	.modal-left-sidebar {
+		position: fixed;
+	    background: #FFF;
+	    left: 0;
+	    width: 80px;
+	    top: 70px;
+	    min-height: 100%;
+	    border-right: 1px solid #e5e5e5;
+
+	    .menu-item {
+	    	text-align: center;
+		    padding: 20px;
+		    font-size: 25px;
+		    border-bottom: 1px solid #e5e5e5;
+		    cursor: pointer;
+		    background: #e8e8e8;
+
+		    &.active {
+		    	background: #fff;
+    			margin-right: -1px;
+    			color: #008cc9;
+		    }
+	    }
+	}
+
+	.modal-right-section {
+		margin-left: 75px;
+		padding: 15px 30px 15px 5px;
+
+		.board-pending-member {
+			margin-top: 50px;
+		}
+
+		.settings-section {
+
+			.fixed-textarea-width {
+				textarea.form-control {
+					width: 100% !important;
+				}
+			}
+
+			.permission-bx-wrapper {
+				border: 1px solid #eee;
+    			border-radius: 4px;
+    			margin-bottom: 30px;
+    			padding: 30px;
+    			min-height: 275px;
+
+    			h3 {
+    				margin-top: 0px;
+    			}
+
+    			.ic-radio {
+    				label {
+    					font-size: 14px;
+    					margin: 0px;
+    				}
+
+					.p-s-desc {
+						color: rgba(0, 0, 0, 0.5);
+						margin-left: 35px;
+					}
+
+    				.check {
+    					height: 20px;
+    					width: 20px;
+    				}
+
+    				.check::before {
+    					height: 8px;
+    					width: 8px;
+    				}
+    			}
+			}
+
+			.custom-bg-image {
+				min-height: 300px;
+			}
+
+			.scn-switch {
+				position: relative;
+				top: -7px;
+			}
+
+			.active-instant {
+				height: 40px;
+				margin-top: 10px;
+
+				.instant-title {
+					margin-left: 20px;
+					font-size: 18px;
+					font-weight: normal;
+				}
+			}
+
+			.estimate-cn {
+				.permission-bx-wrapper {
+					select {
+						height: 44px !important;
+						padding-left: 10px;
+						padding-right: 30px;
+						font-size: 15px !important;
+					}
+				}
+			}
+		}
+	}
+
+	.board-member {
+
+		h3.title {
+			margin: 0;
+			margin-bottom: 15px;
+		}
+
+		.user-info-box {
+		    border: 1px solid #eee;
+		    padding: 20px;
+		    margin-bottom: 30px;
+				height: 230px;
+
+		    .img-box {
+		    	margin-bottom: 10px;
+		    }
+
+		    .no-user-image {
+		    	width: 60px;
+			    height: 60px;
+			    background-color: #e8e8e8;
+			    margin: 0 auto;
+			    border-radius: 255px;
+			    color: #000;
+			    padding-top: 16px;
+    			font-size: 22px;
+		    }
+
+		    .member-img-bx {
+		    	width: 60px;
+			    height: 60px;
+			    margin: 0 auto;
+			    border-radius: 255px;
+		    }
+
+		    .update-bp-link {
+		    	text-decoration: underline;
+		    	cursor: pointer;
+		    }
+		}
+	}
+
+	.imagegallary {
+		min-height: calc(100vh - 195px);
+
+		.board-bg-image-box {
+			margin: 0 auto;
+			max-width: 300px;
+			text-align: center;
+
+			.default-image {
+				font-size: 200px;
+    			color: #337ab7;
+			}
+		}
+
+		.spinner-cn {
+			padding-top: 50px;
+		}
+
+		.gal {
+			margin-bottom: 50px;
+		}
+
+		.upload-new {
+			font-size: 15px !important;
+		    padding-top: 5px;
+		}
+
+		.change-img-box-footer {
+			margin-top:100px;
+		}
+
+		.unsplas-container {
+			margin-top: 100px;
+			margin-bottom: 50px;
+		}
+	}
+
+	.selected-photo {
+		position: absolute;
+	    right: 5px;
+	    top: 5px;
+	    background: #008cc9;
+	    padding: 5px 8px;
+	    color: #FFF;
+	}
+	.selected-photo-lib {
+		position: absolute;
+	    right: 5px;
+	    top: 12px;
+	    background: #008cc9;
+	    padding: 5px 8px;
+	    color: #FFF;
+	}
+}
+
+
+
+
+
+
+// -----------------------------------------------------------------------------
+//  Organizations
+// -----------------------------------------------------------------------------
+
+.modal-create-Organizations {
+	.modal-title {
+		color: $gray-light;
+	}
+	form {
+		width: 400px;
+		margin: 0px auto;
+	}
+	.close-icon {
+		width: 35px;
+		position: absolute;
+		right: 25px;
+		top: 15px;
+	}
+	.op-text-area {
+		width: 100% !important;
+	}
+}
+
+
+
+
+.boards-container {
+
+	.hover-add-sub-section .sub-section-add-line, .hover-add-sub-section .add-section {
+		visibility: hidden;
+	}
+	.hover-add-sub-section:hover .add-section, .hover-add-sub-section:hover .sub-section-add-line {
+		visibility: visible;
+	}
+
+	.add-section {
+		color: #363636;
+	    cursor: pointer;
+	    font-weight: 600;
+	}
+	.st-line-2 {
+		font-size: 20px;
+		margin-bottom: 65px;
+		position: relative;
+		top: -45px;
+		text-align: left;
+		z-index: 1;
+		font-weight: 600;
+	}
+	.st-line-2:before {
+		border-top: 2px dotted #363636;
+		content: "";
+		margin: 0 auto;	      /* this centers the line to the full width specified */
+		position: absolute;	      /* positioning must be absolute here, and relative positioning must be applied to the parent */
+		top: 15px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		z-index: -1;
+		opacity: 0.2;
+	}
+	.st-line-2 span {
+		background: #FFF;
+		padding: 0 30px 0px 30px;
+		position: absolute;
+		left: 40%;
+	}
+}
+
+
+#modal-update-op {
+
+	.board-setting-header {
+		padding: 15px 15px 15px 25px !important;
+    	border-bottom: 1px solid #e5e5e5 !important;
+	}
+
+	.modal-left-sidebar {
+		position: fixed;
+	    background: #FFF;
+	    left: 0;
+	    width: 80px;
+	    top: 70px;
+	    min-height: 100%;
+	    border-right: 1px solid #e5e5e5;
+
+	    .menu-item {
+	    	text-align: center;
+		    padding: 20px;
+		    font-size: 25px;
+		    border-bottom: 1px solid #e5e5e5;
+		    cursor: pointer;
+		    background: #e8e8e8;
+
+		    &.active {
+		    	background: #fff;
+    			margin-right: -1px;
+    			color: #008cc9;
+		    }
+	    }
+	}
+
+	.modal-right-section {
+		margin-left: 75px;
+		padding: 15px 30px 15px 5px;
+
+		.board-pending-member {
+			margin-top: 50px;
+		}
+
+		.settings-section {
+
+			.update-op-from {
+				width: 400px;
+				margin: 0px auto;
+			}
+
+			.fixed-textarea-width {
+				textarea.form-control {
+					width: 100% !important;
+				}
+			}
+
+			.permission-bx-wrapper {
+				border: 1px solid #eee;
+    			border-radius: 4px;
+    			margin-bottom: 30px;
+    			padding: 30px;
+    			min-height: 275px;
+
+    			h3 {
+    				margin-top: 0px;
+    			}
+
+    			.ic-radio {
+    				label {
+    					font-size: 14px;
+    					margin: 0px;
+    				}
+
+					.p-s-desc {
+						color: rgba(0, 0, 0, 0.5);
+						margin-left: 35px;
+					}
+
+    				.check {
+    					height: 20px;
+    					width: 20px;
+    				}
+
+    				.check::before {
+    					height: 8px;
+    					width: 8px;
+    				}
+    			}
+			}
+
+			.custom-bg-image {
+				min-height: 300px;
+			}
+
+			.scn-switch {
+				position: relative;
+				top: -7px;
+			}
+
+			.estimate-cn {
+				.permission-bx-wrapper {
+					select {
+						height: 44px !important;
+						padding-left: 10px;
+						font-size: 15px !important;
+					}
+				}
+			}
+			.ic-text-area {
+				width: 100% !important;
+			}
+
+			.fa-20x {
+				font-size: 20px;
+			}
+
+			.ic-danger-light-btn {
+				background-color: #d9534f;
+				height: 44px;
+			}
+
+			.ic-danger-light-btn:hover {
+				background-color: #d9534f;
+			}
+		}
+	}
+
+	.board-member {
+
+		h3.title {
+			margin: 0;
+			margin-bottom: 15px;
+		}
+
+		.user-info-box {
+		    border: 1px solid #eee;
+		    padding: 20px;
+		    margin-bottom: 30px;
+				height: 230px;
+
+		    .img-box {
+		    	margin-bottom: 10px;
+		    }
+
+		    .no-user-image {
+		    	width: 60px;
+			    height: 60px;
+			    background-color: #e8e8e8;
+			    margin: 0 auto;
+			    border-radius: 255px;
+			    color: #000;
+			    padding-top: 16px;
+    			font-size: 22px;
+		    }
+
+		    .member-img-bx {
+		    	width: 60px;
+			    height: 60px;
+			    margin: 0 auto;
+			    border-radius: 255px;
+		    }
+
+		    .update-bp-link {
+		    	text-decoration: underline;
+		    	cursor: pointer;
+		    }
+		}
+	}
+
+	.imagegallary {
+
+		//
+		min-height: calc(100vh - 195px);
+
+		.board-bg-image-box {
+			margin: 0 auto;
+			max-width: 300px;
+			text-align: center;
+
+			.default-image {
+				font-size: 200px;
+    			color: #337ab7;
+			}
+		}
+
+		.spinner-cn {
+			padding-top: 50px;
+		}
+
+		.gal {
+			margin-bottom: 50px;
+		}
+
+		.upload-new {
+			font-size: 15px !important;
+		    padding-top: 5px;
+		}
+
+		.change-img-box-footer {
+			margin-top:100px;
+		}
+
+		.unsplas-container {
+			margin-top: 100px;
+			margin-bottom: 50px;
+		}
+	}
+
+	.selected-photo {
+		position: absolute;
+	    right: 5px;
+	    top: 5px;
+	    background: #008cc9;
+	    padding: 5px 8px;
+	    color: #FFF;
+	}
+	.selected-photo-lib {
+		position: absolute;
+	    right: 5px;
+	    top: 12px;
+	    background: #008cc9;
+	    padding: 5px 8px;
+	    color: #FFF;
+	}
+}
+
+
+
+
+// -----------------------------------------------------------------------------
+// Ideaboard card detail
+// -----------------------------------------------------------------------------
+
+#card-detail-modal {
+
+	.ic-hr {
+		margin: 10px 0 !important;
+	}
+
+	.card-due-date-label {
+		padding: 5px;
+		border-left: 5px solid #dff0d8;
+		border-right: 5px solid #dff0d8;
+
+		&:hover {
+			border-left: 5px solid #3c763d !important;
+		}
+	}
+
+	.addcard-box-attachment-body {
+		margin: 20px 0;
+	}
+
+	.card-attachment-details {
+
+		.download-card-attachment {
+			position: absolute;
+		    right: -10px;
+		    bottom: 3px;
+		    font-size: 15px;
+		    color: #26a7f1;
+		}
+	}
+
+	.date-picker-footer {
+		margin-top: 10px;
+	}
+
+	.jump-board-btn {
+		width: 47%;
+    	float: left;
+	}
+
+	.delete-board-btn {
+		width: 47%;
+    	float: left;
+    	margin-left: 10px;
+	}
+
+	.assing-user-list {
+
+		.user-image {
+			float: left;
+    		margin-right: 10px;
+
+    		img {
+    			border-radius: 3px;
+    		}
+		}
+
+		.user-name {
+			padding: 5px 0;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			color: gray;
+			width: 140px;
+		}
+
+		.wrapper {
+			padding: 5px;
+			position: relative;
+
+			&:hover {
+				padding: 5px;
+			    background: #337ab7;
+			    color: #FFF !important;
+			    border-radius: 3px;
+
+			    .user-name {
+			    	color: #FFF !important;
+				}
+
+				.selected-member {
+					i {
+						color: #FFF !important;
+					}
+				}
+			}
+
+			.user-image {
+				&.no-image {
+					height: 30px;
+				    width: 30px;
+				    border: 1px solid #e3e5e8;
+				    text-align: center;
+				    padding: 5px;
+				    text-transform: uppercase;
+				    font-weight: 700;
+				    background: #e3e5e8;
+				    color: gray;
+				    border-radius: 3px;
+				}
+			}
+
+			.selected-member {
+				position: absolute;
+			    top: 10px;
+			    right: 3px;
+			    color: gray;
+			    font-size: 15px;
+			}
+		}
+	}
+
+	.ib-go-label {
+	    font-size: 20px;
+	    position: relative;
+	    top: 2px;
+	    right: 2px;
+	    color: #b3b2b2;
+	}
+
+	.cm-right-sidebar {
+		.cm-right-sidebar-btn {
+			background-color: #ececec;
+			border: 0px solid #ececec;
+			color: #58595b;
+			&:hover {
+				background-color: #f7f7f8;
+			}
+		}
+	}
+
+	.estimate-add-cn {
+		.form-group {
+			width: 100%;
+		}
+
+		label {
+			font-size: 10px;
+		}
+
+		input {
+			max-width: 95px;
+			border: 0;
+			border-radius: 0;
+			box-shadow: none;
+			position: relative;
+			top: -10px;
+			font-size: 15px;
+			padding: 6px 2px;
+		}
+	}
+
+}
+
+
+
+/*
+** Card Color Lable sass
+*/
+#card-detail-modal {
+	ul.card-dropdown.card-dropdown-labels {
+		ul.dropdown-listlabel {
+			.label-colored {
+			    height: 25px !important;
+			    color: #FFF !important;
+			    border-radius: 0px !important;
+			    font-weight: 700 !important;
+			    text-align: left !important;
+			    padding: 5px 10px !important;
+			    margin-bottom: 5px !important;
+			    text-overflow: ellipsis !important;
+			    overflow: hidden !important;
+			    white-space: nowrap !important;
+			    width: 83% !important;
+			}
+		}
+		.card-dropdown-labels-wrap {
+			.dropdown-editlabel {
+				input.form-control {
+				    height: 28px !important;
+				    float: right !important;
+				    margin: 0px !important;
+				    font-size: 10px !important;
+				    padding: 5px 5px 3px 5px !important;
+				    width: 143px !important;
+				}
+				input.input-width {
+					width: 146px !important;
+				}
+			}
+			.dropdown-editlabel {
+				li {
+					padding-bottom: 0px !important;
+				}
+			}
+		}
+
+		.remove-card-label {
+		    position: absolute;
+		    right: 12px;
+		    top: 7px;
+		    font-size: 15px;
+		    z-index: 100;
+		    color: #337ab7;
+		}
+		.trash-box {
+			height: 28px !important;
+		}
+	}
+
+	#nt614, #ntt5 {
+		width: 250px !important;
+	}
+	.noise-dd-content {
+		.noise-dd-content-title {
+			padding: 10px !important;
+		}
+	}
+ 	.ic-labels-card-dropdown-labels-wrap {
+ 		margin-top: 0px !important;
+ 	}
+ 	.color-row {
+ 		margin-left: 0px !important;
+ 		margin-right:0px !important;
+ 	}
+ 	.color-check-box.sel-color {
+ 		border-top-left-radius: 4px !important;
+    	border-bottom-left-radius: 4px !important;
+ 	}
+	.color-width {
+		height: 25px !important;
+		padding-left: 0px !important;
+	    padding-right: 0px !important;
+	}
+ 	.color-check-box {
+ 		background: #e3e5e8;
+ 		height: 25px !important;
+		padding-left: 0px !important;
+ 		padding-right:0px !important;
+ 		a {
+    		float: left !important;
+			width: 100%;
+			height: 100%;
+			margin-top: 0;
+ 		}
+
+ 		a.active {
+ 			background-position: center !important;
+ 		}
+ 	}
+ 	.mCSB_scrollTools {
+ 		.mCSB_draggerContainer {
+ 			left: 18px !important;
+ 		}
+ 	}
+
+ 	.ib-cog-icon {
+	    font-size: 15px;
+	    position: relative;
+	    top: 1px;
+	    right: 0px;
+	    color: #b3b2b2;
+	    padding-right: 5px;
+	}
+	.ic-labels-card-dropdown-labels-wrap::-webkit-scrollbar {
+		-webkit-appearance: none !important;
+		width: 5px !important;
+		height: 10px !important;
+		margin-left: 2px;
+	}
+	.ic-labels-card-dropdown-labels-wrap::-webkit-scrollbar-thumb {
+	 	border-radius: 8px !important;
+		border: 0px solid white !important;
+		background-color: rgba(0,0,0,.2) !important;
+	}
+}
+.body-project {
+	.makenoise-modal.modal {
+		.dropdown-menu-clone.card-dropdown {
+			padding: 10px 1px 10px 10px !important;
+		}
+		li {
+			width: 99% !important;
+		}
+	}
+}
+
+
+#non-login-card-detail-modal,
+#card-detail-modal {
+
+	.card-attachment-file-icon {
+		width: 96px;
+	    height: 90px;
+	    overflow: hidden;
+	    border-right: 1px solid #eee;
+	    float: left;
+	    background-size: 50px auto !important;
+	}
+
+	.card-attachment-file-defult-icon {
+		width: 96px;
+		height: 90px;
+		overflow: hidden;
+		border-right: 1px solid #eee; background: url(../../images/files-empty-icon.png) no-repeat 50% 50%;
+		float: left;
+		background-size: 50px auto;
+
+		span {
+			position: relative;
+			top: 20px;
+			left: 30px;
+			font-size: 12px;
+			color: #EBEBEB;
+		}
+	}
+
+	.file-ext-mov {
+        background: url("../../images/files-mov-icon.png") no-repeat 50% 50%;
+    }
+    .file-ext-mp3 {
+        background: url("../../images/files-mp3-icon.png") no-repeat 50% 50%;
+    }
+    .file-ext-mp4 {
+        background: url("../../images/files-mp4-icon.png") no-repeat 50% 50%;
+    }
+    .file-ext-png {
+        background: url("../../images/files-png-icon.png") no-repeat 50% 50%;
+    }
+    .file-ext-ppt {
+        background: url("../../images/files-ppt-icon.png") no-repeat 50% 50%;
+    }
+    .file-ext-pptx {
+        background: url("../../images/files-pptx-icon.png") no-repeat 50% 50%;
+    }
+    .file-ext-psd {
+        background: url("../../images/files-psd-icon.png") no-repeat 50% 50%;
+    }
+    .file-ext-xls {
+        background: url("../../images/files-xls-icon.png") no-repeat 50% 50%;
+    }
+    .file-ext-xlsx {
+        background: url("../../images/files-xlsx-icon.png") no-repeat 50% 50%;
+    }
+    .file-ext-zip {
+        background: url("../../images/files-zip-icon.png") no-repeat 50% 50%;
+    }
+    .file-ext-html {
+        background: url("../../images/files-html-icon.png") no-repeat 50% 50%;
+    }
+    .file-ext-java {
+        background: url("../../images/files-java-icon.png") no-repeat 50% 50%;
+    }
+    .file-ext-accdt {
+        background: url("../../images/files-accdt-icon.png") no-repeat 50% 50%;
+    }
+    .file-ext-empty {
+        background: url("../../images/files-empty-icon.png") no-repeat 50% 50%;
+    }
+    .file-ext-pdf {
+        background: url("../../images/files-pdf-icon.png") no-repeat 50% 50%;
+    }
+    .file-ext-doc {
+        background: url("../../images/files-doc-icon.png") no-repeat 50% 50%;
+    }
+    .file-ext-docx {
+        background: url("../../images/files-docx-icon.png") no-repeat 50% 50%;
+    }
+    .file-ext-ai {
+        background: url("../../images/files-ai-icon.png") no-repeat 50% 50%;
+     }
+    .file-ext-indd {
+        background: url("../../images/files-indd-icon.png") no-repeat 50% 50%;
+    }
+}
+
+
+
+
+
+
+
+
+
+// -----------------------------------------------------------------------------
+// Create card from calander
+// -----------------------------------------------------------------------------
+
+#addCardFromCalendar {
+
+	.modal-dialog {
+		max-width: 300px;
+		min-width: 300px;
+	}
+
+	.modal-content {
+		padding: 20px 20px 0;
+	}
+
+	.modal-body {
+		padding: 20px 0;
+	}
+
+	.modal-footer {
+		padding: 15px 0;
+	}
+}
+
+
+
+
+
+
+// -----------------------------------------------------------------------------
+// Ideaboard calander
+// -----------------------------------------------------------------------------
+
+.add-card-calendar {
+	.clear-card-title {
+		width: 100% !important;
+	}
+
+	/* Checkbox handle */
+
+	.checkbox {
+		margin-top: 0px !important;
+		padding: 0px 15px !important;
+	}
+
+	.checkbox label:after,
+	.radio label:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+
+	.checkbox-inline  {
+		padding: 0px !important;
+		margin-bottom: 5px !important;
+	}
+
+	.checkbox-inline+.checkbox-inline {
+		margin-left: 0px !important;
+	}
+
+	.checkbox .cr,
+	.radio .cr {
+		border: 1px solid #a9a9a9;
+		width: 1.3em;
+		height: 1.3em;
+		float: left;
+	}
+
+	.radio .cr {
+		border-radius: 50%;
+	}
+
+	.checkbox .cr .cr-icon,
+	.radio .cr .cr-icon {
+		position: absolute;
+		font-size: .8em;
+		line-height: 0;
+		top: 45%;
+		left: 6px;
+	}
+
+	.checkbox .cr-user-name {
+		margin-left: 10px;
+		margin-right: 10px;
+		font-size: 15px;
+	}
+
+	.radio .cr .cr-icon {
+		margin-left: 0.04em;
+	}
+
+	.checkbox label input[type="checkbox"],
+	.radio label input[type="radio"] {
+		display: none;
+	}
+
+	.checkbox label input[type="checkbox"] + .cr > .cr-icon,
+	.radio label input[type="radio"] + .cr > .cr-icon {
+		transform: scale(3) rotateZ(-20deg);
+		opacity: 0;
+		transition: all .3s ease-in;
+	}
+
+	.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon,
+	.radio label input[type="radio"]:checked + .cr > .cr-icon {
+		transform: scale(1) rotateZ(0deg);
+		opacity: 1;
+	}
+
+	.checkbox label input[type="checkbox"]:disabled + .cr,
+	.radio label input[type="radio"]:disabled + .cr {
+		opacity: .5;
+	}
+}
+
+#add-initiative-card {
+
+	.checkbox {
+		margin-top: 0px !important;
+		padding: 0px 15px !important;
+	}
+
+	.checkbox label:after,
+	.radio label:after {
+	    content: '';
+	    display: table;
+	    clear: both;
+	}
+
+	.checkbox-inline  {
+		padding: 0px !important;
+		margin-bottom: 5px !important;
+	}
+
+	.checkbox-inline+.checkbox-inline {
+		margin-left: 0px !important;
+	}
+
+	.checkbox .cr,
+	.radio .cr {
+		border: 1px solid #a9a9a9;
+		width: 1.3em;
+		height: 1.3em;
+		float: left;
+	}
+
+	.radio .cr {
+	    border-radius: 50%;
+	}
+
+	.checkbox .cr .cr-icon,
+	.radio .cr .cr-icon {
+		position: absolute;
+	    font-size: .8em;
+	    line-height: 0;
+	    top: 45%;
+	    left: 6px;
+	}
+
+	.checkbox .cr-user-name {
+		margin-left: 10px;
+    	margin-right: 10px;
+		font-size: 15px;
+	}
+
+	.radio .cr .cr-icon {
+	    margin-left: 0.04em;
+	}
+
+	.checkbox label input[type="checkbox"],
+	.radio label input[type="radio"] {
+	    display: none;
+	}
+
+	.checkbox label input[type="checkbox"] + .cr > .cr-icon,
+	.radio label input[type="radio"] + .cr > .cr-icon {
+	    transform: scale(3) rotateZ(-20deg);
+	    opacity: 0;
+	    transition: all .3s ease-in;
+	}
+
+	.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon,
+	.radio label input[type="radio"]:checked + .cr > .cr-icon {
+	    transform: scale(1) rotateZ(0deg);
+	    opacity: 1;
+	}
+
+	.checkbox label input[type="checkbox"]:disabled + .cr,
+	.radio label input[type="radio"]:disabled + .cr {
+	    opacity: .5;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+// -----------------------------------------------------------------------------
+// Crad attachments
+// -----------------------------------------------------------------------------
+
+#card-attachment-modal {
+	.dropzone-file-name {
+		.dz-filename {
+			word-break: break-all;
+		}
+	}
+
+	.dropzone {
+	    padding: 0;
+	}
+	.dropzone .cool-font {
+	    text-align: center !important;
+	}
+	.dropzone .dz-preview {
+	    margin: 13px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// -----------------------------------------------------------------------------
+// Non login user card detail
+// -----------------------------------------------------------------------------
+
+.ib-container {
+	#non-login-card-detail-modal {
+		.modal-content {
+			border-radius: 6px !important;
+
+			.ic-drag-file0 {
+				z-index: 1;
+			}
+
+			.addcard-left {
+				width: 100%;
+				padding: 25px 20px;
+			}
+
+			.ic-hr {
+				margin: 10px 0 !important;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+// -----------------------------------------------------------------------------
+// Calendar
+// -----------------------------------------------------------------------------
+
+#calendar-uncle {
+	.fc-day-grid-event {
+		.fc-content {
+			font-size: 15px !important;
+    		padding: 3px !important;
+		}
+	}
+
+	.fc-day {
+		&.fc-today,
+		&.fc-future {
+			cursor: pointer !important;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//
+// Initiative css
+//
+
+.initiative-cn {
+	height: 28px;
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 5px 0;
+
+	.initiative-settings {
+		font-size: 18px;
+	}
+}
+
+
+#add-initiative {
+	.initiative-list {
+		border-bottom: 1px solid #ececec;
+		padding: 5px 0;
+
+		.ini-name {
+			width: 100%;
+			word-wrap: break-word;
+			font-size: 16px;
+		}
+
+		.edit-del-icon {
+			display: none;
+
+			span {
+				font-size: 15px;
+				margin-left: 5px;
+				position: relative;
+				top: 10px;
+				color: #777777;
+			}
+		}
+	}
+
+	.initiative-list:hover .edit-del-icon {
+		display: block;
+	}
+
+	.initiative-list:last-child {
+		border-bottom: 0;
+	}
+
+	.trash-red {
+		color: red;
+	}
+
+	.ini-close {
+		margin-top: -2px;
+	}
+
+	.no-initiative {
+		padding: 50px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+* Firefox Related css/scss
+*/
+
+@-moz-document url-prefix() {
+	.modal-hight-box.modal {
+		bottom: -70px !important;
+	}
+
+	.boards-container {
+		.board-bx {
+			.board-bx-wrapper {
+				.board-name-bx {
+					height: 100px !important;
+				}
+			}
+		}
+	}
+
+	#modal-board-settings {
+		.board-setting-header {
+			padding: 15px 15px 14px 25px !important;
+	    	border-bottom: 1px solid #e5e5e5 !important;
+		}
+	}
+}

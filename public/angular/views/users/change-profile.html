@@ -1,0 +1,66 @@
+<div ng-if="g.isShowHeader" data-ng-include="'/angular/views/includes/ib-header.html'"></div>
+
+<div class="container modal-create-board mt-100 ib-change-profile" ng-controller="UserController" data-ng-init="uo.pf.init(); uo.pf.initDropzone();">
+
+    <div id="uuser-profile-dz" class="dropzone hide"><div class="dz-default dz-message"><h2 class="cool-font"> Drag and drop or choose a file from your computer </h2></div></div>
+		          		
+  	<form name="editForm" ng-submit="uo.pf.submit(editForm, uo.pf.model)" novalidate>
+		
+		<h4 class="modal-title text-center mt-50 mb-50">My Profile</h4>
+
+  		<div class="row">
+
+            <div class="col-md-12 mb-10 user-image-box" data-ng-if="!g.loggedUser.image && !uo.pf.isUplaodReq">
+                <div class="form-group cr-board-name text-center user-image">
+                    <img data-ng-src="/images/profile-temp.jpg" class="pointer img-rounded mb-10"><br>
+                    <span class="pointer ic-link" ng-click="uo.pf.openDropzone()">change avatar</span>
+                </div>
+            </div>
+
+  			<div class="col-md-12 mb-10 user-image-box" data-ng-if="(g.loggedUser.image || uo.pf.isUplaodReq)">
+			    <div class="form-group cr-board-name text-center user-image">
+			      	
+			      	<img data-ng-src="{{uo.pf.model._profileImage}}" class="pointer img-rounded mb-10" ng-if="uo.pf.isUplaoding">
+
+                    <img src="/images/icons/spinner.svg" alt="" ng-if="!uo.pf.isUplaoding" class="pointer img-rounded mb-10" height="50px" width="20px">
+			      	
+			      	<div ng-if="uo.pf.isUplaoding"><span class="pointer ic-link" ng-click="uo.pf.openDropzone()">change avatar</span></div>
+                </div>
+            </div>
+
+  			<div class="col-md-12 mb-10">
+			    <div class="form-group cr-board-name">
+			      	<label for="editFirstName">First Name </label>
+					<span class="text-red pull-right" data-ng-show="uo.pf.isSubmited && editForm.editFirstName.$error.required"> First Name Required </span>
+			      	<input type="text" class="form-control ic-input" name="editFirstName" ng-model="uo.pf.model.first_name" ng-required="true" maxlength="25">
+			    </div>
+			</div>
+
+			<div class="col-md-12 mb-10">
+			    <div class="form-group cr-board-name">
+			      	<label for="editLastName">Last Name </label>
+					<span class="text-red pull-right" data-ng-show="uo.pf.isSubmited && editForm.editLastName.$error.required"> Last Name Required </span>
+			      	<input type="text" class="form-control ic-input" name="editLastName" ng-model="uo.pf.model.last_name" ng-required="true" maxlength="25">
+			    </div>
+			</div>
+
+			<div class="col-md-12 text-center mt-25">
+				<div ng-if="!uo.pf.model.isSubmitReq">
+		    		<button type="submit" class="btn btn-primary btn-block ic-primary-light-btn">Save</button>
+		    	</div>
+		    	<div ng-if="uo.pf.model.isSubmitReq">
+		    		<button class="btn btn-primary btn-block ic-primary-light-btn" disabled>Saving...</button>
+		    	</div>
+		    </div>
+
+		    <div class="col-md-12 text-right mt-25">
+				<div>
+		    		<a href="#!/change-password">Change Password</a>
+		    	</div>
+		    </div>
+
+	    </div>
+	</form>
+
+</div>
+
