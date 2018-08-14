@@ -167,6 +167,16 @@ appModule.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
             templateUrl: '/angular/views/single.html'
         });
 
+        $stateProvider.state('company-admin', {
+            url: '/company-admin',
+            templateUrl: '/angular/views/admin/company-admin.html'
+        });
+
+        $stateProvider.state('site-admin', {
+            url: '/site-admin',
+            templateUrl: '/angular/views/admin/site-admin.html'
+        });
+
         // $stateProvider.state('login', {
         //     url: '/login',
         //     templateUrl: 'angular/views/users/login.html',

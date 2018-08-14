@@ -8,7 +8,7 @@
 			<div class="row d-flex align-items-center justify-content-center">
 				<div class="about-content col-lg-12">
 					<h1 class="text-white">
-						Contact Ussss				
+						Contact Us				
 					</h1>	
 					<p class="text-white"><a href="#!/home">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="contact.html"> Contact Us</a></p>
 				</div>											
@@ -17,6 +17,66 @@
 	</section>
 	<!-- End banner Area -->	
 
+	<section class="features-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="single-feature">
+						<h4>Helpline Number</h4>
+						<p>
+							<i class="fa fa-mobile" aria-hidden="true"></i>
+							<strong>+91 6353505097</strong>
+						</p>
+						<p>
+							<i class="fa fa-whatsapp" aria-hidden="true"></i>
+							<strong>+91 6353505097</strong>
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="single-feature">
+						<h4>Office Contact</h4>
+						<p>
+							<i class="fa fa-mobile" aria-hidden="true"></i>
+							<strong>+91 7878118188</strong>
+							<strong>+91 6355489383</strong>
+						</p>
+						<p>
+							<i class="fa fa-envelope-o" aria-hidden="true"></i>
+							<strong>resume.pjp@gmail.com</strong>
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="single-feature">
+						<h4>HR Contact</h4>
+						<p>
+							<i class="fa fa-mobile" aria-hidden="true"></i>
+							<strong>+91 7984175602</strong>
+							<strong>+91 7984175602</strong>
+						</p>
+						<p>
+							<i class="fa fa-envelope-o" aria-hidden="true"></i>
+							<strong>hrd.pjob@gmail.com</strong>
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="single-feature">
+						<h4>Address</h4>
+						<p>
+							<strong>Main Branch:</strong>
+							55/D Gulabvihar,Opp.
+							Amarnath Temple Garden,
+							Behind Big Bazaar,
+							Rajkot-360005
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</section>
+
 
 
 	<!-- Start contact-page Area -->
@@ -24,20 +84,31 @@
 		<div class="container">
 			<div class="row">
 				<div class="map-wrap" style="width:100%; height: 445px;" id="map"></div>
-				<div class="col-lg-4 d-flex flex-column">
+			<!-- 	<div class="col-lg-4 d-flex flex-column">
 					<a class="contact-btns" href="#">Submit Your CV</a>
 					<a class="contact-btns" href="#">Post New Job</a>
 					<a class="contact-btns" href="#">Create New Account</a>
+				</div> -->
+
+
+				<div class="col-lg-12">
+					<div class="form-group">
+						<label> <input type="radio" name="">Candidate Inquiry</label>
+						<label><input type="radio" name="">Company Inquiry</label>
+					</div>
 				</div>
-				<div class="col-lg-8">
+
+				<div class="col-lg-12">
 					<form class="form-area " id="myForm" action="mail.php" method="post" class="contact-form text-right">
 						<div class="row">	
 							<div class="col-lg-12 form-group">
 								<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required="" type="text">
 							
 								<input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control" required="" type="email">
+								<input name="text" placeholder="Mobile Number"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mobile Number'" class="common-input mb-20 form-control" required="" type="email">
 
 								<input name="subject" placeholder="Enter your subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your subject'" class="common-input mb-20 form-control" required="" type="text">
+								
 								<textarea class="common-textarea mt-10 form-control" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
 								<button class="primary-btn mt-20 text-white" style="float: right;">Send Message</button>
 								<div class="mt-20 alert-msg" style="text-align: left;"></div>

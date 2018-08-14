@@ -1895,9 +1895,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 10px;
   text-align: center;
 }
-#header.header-scrolled #logo img {
+/*#header.header-scrolled #logo img {
   width: 90%;
-}
+}*/
 
 @media (max-width: 673px) {
   #logo {
