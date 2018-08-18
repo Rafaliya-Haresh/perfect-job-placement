@@ -46,7 +46,7 @@ localStorage.setItem('cachesVersionNo', process.env.cachesVersion);
 
 
 // connect mongDB
-mongoose.connect(config.get('mongoDBURI'), { useMongoClient: true });
+mongoose.connect(process.env.MONGODB_URI, { useMongoClient: true });
 
 require('./config/passport')(passport);
 
