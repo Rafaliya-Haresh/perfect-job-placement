@@ -5,4 +5,5 @@ process.env.isCachesActivated = 'false';
 process.env.cachesVersion = '1';
 
 //
-require('./index-old');
+//require('./index-old');
+require('./ib-server');
