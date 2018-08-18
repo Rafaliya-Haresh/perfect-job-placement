@@ -42,15 +42,12 @@ process.env.cachesVersion = ''+ (parseInt(vNumber) + 1);
 
 localStorage.setItem('cachesVersionNo', process.env.cachesVersion);
 
-
-
-
 // connect mongDB
 //mongoose.connect(config.get('mongoDBURI'));
 
 mongoose.connect('mongodb://heroku_xxgmmxtk:fh9nvalplv0u5h8r7821vcdnmq@ds225902.mlab.com:25902/heroku_xxgmmxtk', function(err) {
 	if (err) {
-		console.log('===================Could not connect to MongoDB!');
+		console.log('Could not connect to MongoDB!');
 	}
 });
 
