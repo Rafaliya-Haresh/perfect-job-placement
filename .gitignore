@@ -2,7 +2,6 @@
 .nodemonignore
 .sass-cache/
 npm-debug.log
-node_modules/
 app/tests/coverage/
 .bower-*/
 .idea/
@@ -17,5 +16,4 @@ public/iccaches/script-2.min.js
 public/iccaches/script-3.min.js
 public/iccaches/script-4.min.js
 public/iccaches
-public/libs
 localStorage/
