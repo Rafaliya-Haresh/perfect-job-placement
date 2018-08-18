@@ -1,1 +1,1 @@
-web: node local.js
+web: node ib-server.js

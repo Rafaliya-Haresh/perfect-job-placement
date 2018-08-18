@@ -13,6 +13,6 @@ exports.index = function(req, res) {
 
     res.render('layout', {
 		userId: userId,
-        // env: process.env.NODE_ENV || 'development',
+        env: process.env.NODE_ENV || 'development',
     });
 }
